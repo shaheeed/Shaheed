@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>تواصل مع الاستاذ</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            
+            <section class="py-5">
+                <div class="container px-5">
+                    <!-- Contact form-->
+                    <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                        <div class="text-center mb-5">
+                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                            <h1 class="fw-bolder"> تواصل مع الاستاذ</h1>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <div id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                        <label for="name">Full name</label>
+                                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                    </div>
+                                    
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" placeholder="name@example.com" type="email" id="email" name="email">
+                                        <span id="emailError" class=" text-danger bg-black"></span>
+                                        <label for="email">الايميل...</label>
+
+                                    </div>
+                                    
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"  />
+                                        <label for="phone">رقم الموبايل ...</label>
+                                    </div>
+                                    
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <label for="message">رسالتك ...</label>
+                                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                    </div>
+                                    
+                                    <div class="d-none" id="submitSuccessMessage">
+                                        <div class="text-center mb-3">
+                                            <div class="fw-bolder">تم تسجيل عمليه الارسال بنجاح</div>
+                                            سيتم التواصل معكم فى اقرب وقت 
+                                            <br />
+                                            
+                                            <button class="btn btn-danger"><a href="index.html" class="text-decoration-none text-light">العوده الى الصفحه الرئيسيه  <i class="bi bi-arrow-left"></i></a></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">خطا فى ارسال الرساله !</div></div>
+                                    
+                                    <div class="d-grid"><button class="btn btn-primary btn-lg " id="submitButton" type="submit" onclick="validateForm()">تاكيد</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+
+        
+        
+    
+        
+        <script>
+            function validateForm() {
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+
+                if (name === "") {
+                    document.getElementById('nameError').innerHTML = 'يرجى إدخال اسمك!';
+                    return false;
+                } else {
+                    document.getElementById('nameError').innerHTML = '';
+                }
+    
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(25, 12, 12);
+    line-height: 2;
+    font-family: 'Noto Naskh Arabic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    
+    
+        /* Global rules end */
+    
+    .MainContainer {
+    display: grid;
+    grid: 50px repeat(4, 1fr)/ repeat(5, 1fr); /* 50px => Nav  */
+    gap: 30px 20px;
+    }
+    
+    .navPart {
+    grid-column: 1/-1;
+    }
+    
+    .aboutUsWord {
+    display: flex;
+        grid-column: span 2;
+    grid-row: span 2;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 100px;
+    }
+    
+    .aboutUsTopic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px; 
+    padding: 10px 20px;
+        grid-column: span 3;
+    grid-row: span 2;
+    height: 406px;
+    overflow: auto;
+    border-bottom-right-radius: 37px;
+    border: 1px solid;
+    border-top: none;
+    border-left: none;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 130px;
+    border-color: #ffffff36;
+    margin-left: 5px;
+    }
+    
+    .flexPartContainer {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+    
+    .flexPart {
+    width: 190px;
+    height: 220px;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    }
+    
+    .flexPart span {
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background-color: rgb(189, 170, 170);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    }
+        
+    .flexPart > span p {
+    font-size: 20px;
+    font-weight: bold;
+    }
+    
+    /* animation part */
+    .flexPart::before {
+    content: "";
+    position: absolute;
+    width: 195px;
+    height: 195px;
+    background-image: conic-gradient(transparent, transparent, transparent, #111313);
+    animation: animation 4s linear infinite;
+    
+        }
+    
+    .flexPart::after {
+    content: "";
+    position: absolute;
+    width: 195px;
+    height: 195px;
+    background-image: conic-gradient(transparent, transparent, transparent, #111313);
+    animation: animation 4s linear infinite;
+    animation-delay: -2s;
+    }
+    
+    
+    @keyframes animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+    transform: rotate(360deg);
+    }
+    }
+    
+    
+    
